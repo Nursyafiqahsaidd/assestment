@@ -1,1 +1,323 @@
-# assestment
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+        body {
+            background: #ffff;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            width: 100vw;
+            padding: 20px;
+        }
+        
+        .card {
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        
+        .bar-blue {
+            width: 20%;
+            border-bottom: 2px solid blue;
+        }
+        
+        .bar-red {
+            width: 20%;
+            border-bottom: 2px solid red;
+        }
+        
+        .bar-green {
+            width: 20%;
+            border-bottom: 2px solid green;
+        }
+        
+        .bar-status {
+            margin: 10px;
+        }
+        
+        .highcharts-figure,
+        .highcharts-data-table table {
+            min-width: 320px;
+            max-width: 500px;
+            margin: 1em auto;
+        }
+        
+        #container {
+            height: 200px;
+            width: 300px;
+        }
+        
+        #container2 {
+            height: 200px;
+            width: 300px;
+        }
+        
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+        
+        .highcharts-data-table td,
+        .highcharts-data-table th,
+        .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+        
+        .highcharts-data-table thead tr,
+        .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center align-items-center">
+
+        <div class="d-flex align-items-end col-md-4 flex-column justify-content-center ">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Orders In August</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">+53% 2016</h6>
+                        <div class="d-flex justify-content-center">
+                            <figure class="highcharts-figure">
+                                <div id="container"></div>
+
+                            </figure>
+                        </div>
+
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a> -->
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex flex-column align-items-center bar-status">
+                                <p>Pending: &nbsp; 720</p>
+                                <div class="bar-blue"> </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center bar-status">
+                                <p>Resolved: &nbsp; 990</p>
+                                <div class="bar-green"> </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center bar-status">
+                                <p>Closed: &nbsp; 720</p>
+                                <div class="bar-red"> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Orders In May</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">+10% 2016</h6>
+                        <div class="d-flex justify-content-center">
+                            <figure class="highcharts-figure">
+                                <div id="container2"></div>
+
+                            </figure>
+                        </div>
+
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a> -->
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex flex-column align-items-center bar-status">
+                                <p>New: &nbsp; 720</p>
+                                <div class="bar-blue"> </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center bar-status">
+                                <p>Pending: &nbsp; 990</p>
+                                <div class="bar-green"> </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center bar-status">
+                                <p>Solved: &nbsp; 720</p>
+                                <div class="bar-red"> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center col-md-4 flex-column justify-content-center ">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-start  col-md-4 flex-column justify-content-center">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        title: {
+            text: 'TOTAL',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 60
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: -50,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'white'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%'],
+                size: '110%'
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            innerSize: '50%',
+            data: [
+
+                ['Pending', 720],
+                ['Resolved', 990],
+                ['Closed', 720], {
+                    name: 'Other',
+                    y: 7.61,
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            ]
+        }],
+        colors: ['blue', 'green', 'red', ]
+    });
+
+    Highcharts.chart('container2', {
+        chart: {
+            type: 'variablepie'
+        },
+        title: {
+            text: '2400'
+        },
+        tooltip: {
+            headerFormat: '',
+            pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
+                'Area (square km): <b>{point.y}</b><br/>' +
+                'Population density (people per square km): <b>{point.z}</b><br/>'
+        },
+        series: [{
+            minPointSize: 10,
+            innerSize: '20%',
+            zMin: 0,
+            name: 'countries',
+            data: [{
+                name: 'New',
+                y: 312685,
+                z: 100
+            }, {
+                name: 'Pending',
+                y: 312685,
+                z: 100
+            }, {
+                name: 'Ship',
+                y: 312685,
+                z: 100
+            }],
+        }],
+        colors: ['blue', 'green', 'red', ]
+    });
+</script>
